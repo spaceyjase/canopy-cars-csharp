@@ -1,8 +1,8 @@
 [gd_resource type="ArrayMesh" load_steps=4 format=2]
 
-[ext_resource path="res://CarsModels/paintYellow.material" type="Material" id=1]
-[ext_resource path="res://CarsModels/carTire.material" type="Material" id=2]
-[ext_resource path="res://CarsModels/plastic.material" type="Material" id=3]
+[ext_resource path="res://Assets/CarsModels/paintYellow.material" type="Material" id=1]
+[ext_resource path="res://Assets/CarsModels/carTire.material" type="Material" id=2]
+[ext_resource path="res://Assets/CarsModels/plastic.material" type="Material" id=3]
 
 [resource]
 resource_name = "wheelTractorBack"

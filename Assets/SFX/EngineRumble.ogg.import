@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EngineRumble.ogg-63e2ceb6f077c614ec80ea1ecfb9335e.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/EngineRumble.ogg"
+dest_files=[ "res://.import/EngineRumble.ogg-63e2ceb6f077c614ec80ea1ecfb9335e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
