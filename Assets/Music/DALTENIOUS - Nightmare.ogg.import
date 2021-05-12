@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Nightmare.ogg-189b5a7e466a39c964e3565311300310.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Nightmare.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Nightmare.ogg-189b5a7e466a39c964e3565311300310.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

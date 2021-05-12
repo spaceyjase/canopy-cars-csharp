@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Just Chill.ogg-479ae380f2f400e81b2611a2a77be2e7.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Just Chill.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Just Chill.ogg-479ae380f2f400e81b2611a2a77be2e7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

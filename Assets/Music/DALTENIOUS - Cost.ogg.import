@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Cost.ogg-73cd74a7ecdc1953ca80b4fedfcc4a0d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Cost.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Cost.ogg-73cd74a7ecdc1953ca80b4fedfcc4a0d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Sunrest.ogg-15c8bf3b9bf175d2d524245252ed9f71.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Sunrest.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Sunrest.ogg-15c8bf3b9bf175d2d524245252ed9f71.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

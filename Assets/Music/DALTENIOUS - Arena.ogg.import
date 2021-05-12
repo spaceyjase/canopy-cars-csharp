@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Arena.ogg-1785d281e4d1e3a171bc6cd170002426.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Arena.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Arena.ogg-1785d281e4d1e3a171bc6cd170002426.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

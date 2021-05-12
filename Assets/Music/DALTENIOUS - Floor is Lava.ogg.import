@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - Floor is Lava.ogg-77e92f32314b1a969edecd5f2e2aae9d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/DALTENIOUS - Floor is Lava.ogg"
+dest_files=[ "res://.import/DALTENIOUS - Floor is Lava.ogg-77e92f32314b1a969edecd5f2e2aae9d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
