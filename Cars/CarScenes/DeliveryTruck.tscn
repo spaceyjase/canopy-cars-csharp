@@ -152,23 +152,11 @@ material/1 = null
 [node name="WheelFrontRight" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.077, 1.00984 )
 
-[node name="WheelDefault" parent="WheelFrontRight" index="0"]
-material/1 = ExtResource( 3 )
-
 [node name="WheelFrontLeft" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.077, 1.00984 )
-
-[node name="WheelDefault" parent="WheelFrontLeft" index="0"]
-material/1 = ExtResource( 3 )
 
 [node name="WheelBackRight" parent="." index="5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.077, -0.610439 )
 
-[node name="WheelDefault" parent="WheelBackRight" index="0"]
-material/1 = ExtResource( 3 )
-
 [node name="WheelBackLeft" parent="." index="6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.077, -0.610439 )
-
-[node name="WheelDefault" parent="WheelBackLeft" index="0"]
-material/1 = ExtResource( 3 )

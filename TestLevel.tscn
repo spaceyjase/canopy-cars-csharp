@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Cars/CarScenes/DeliveryTruck.tscn" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+use_collision = true
+width = 200.0
+height = 0.1
+depth = 200.0
+
+[node name="DeliveryTruck" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+playerId = 1
+
+[node name="Camera" type="Camera" parent="DeliveryTruck"]
+transform = Transform( -1, 4.44089e-16, -8.74228e-08, -6.97927e-09, 0.996808, 0.0798336, 8.71437e-08, 0.0798336, -0.996808, 0, 2.4736, -5.63219 )
+far = 500.0
