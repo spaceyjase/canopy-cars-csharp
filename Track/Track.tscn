@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Cars/CarScenes/DeliveryTruck.tscn" type="PackedScene" id=2]
@@ -8,6 +8,22 @@
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock3.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ProceduralSky" id=3]
+ground_energy = 2.0
+sun_color = Color( 0.886275, 0.756863, 0.505882, 1 )
+sun_longitude = -90.0
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+ambient_light_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 2
+ss_reflections_enabled = true
+ssao_enabled = true
+adjustment_enabled = true
+adjustment_saturation = 1.5
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -37,6 +53,14 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 3, 0 )
 }
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.352376, -0.14219, -0.924993, 0.92105, -0.122441, 0.369696, -0.165824, -0.982237, 0.0878192, 0, 29.8289, 27 )
+light_energy = 1.5
+shadow_enabled = true
+
 [node name="Boundary" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.24158, 0 )
 
@@ -57,17 +81,6 @@ path_continuous_u = false
 path_joined = true
 smooth_faces = true
 material = SubResource( 2 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.612372, -0.5, 0.612372, 0.353553, 0.866025, 0.353553, -0.707107, 0, 0.707107, 0, 25, 27 )
-
-[node name="DeliveryTruck" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 12 )
-playerId = 1
-
-[node name="Camera" type="Camera" parent="DeliveryTruck"]
-transform = Transform( -1, -1.13133e-08, -8.89122e-08, -3.394e-08, 0.965926, 0.258819, 8.29545e-08, 0.258819, -0.965926, 0, 3, -5 )
-far = 1000.0
 
 [node name="NatureProps" type="Spatial" parent="."]
 
@@ -199,3 +212,11 @@ transform = Transform( 0.682968, 0, 0.730448, -0.723465, -0.137946, 0.676439, 0.
 
 [node name="Rock6" parent="NatureProps/Rocks" instance=ExtResource( 8 )]
 transform = Transform( 0.26294, -0.323502, -1.95607, -1.36284, 1.40362, -0.415333, 1.43997, 1.38751, -0.035906, -12.8319, 1.63245, 19.0165 )
+
+[node name="DeliveryTruck" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 12 )
+playerId = 1
+
+[node name="Camera" type="Camera" parent="DeliveryTruck"]
+transform = Transform( -1, -1.13133e-08, -8.89122e-08, -3.394e-08, 0.965926, 0.258819, 8.29545e-08, 0.258819, -0.965926, 0, 3, -5 )
+far = 1000.0
