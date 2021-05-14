@@ -1,0 +1,152 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/LandscapeModels/Nature/Bush3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/LandscapeModels/Nature/Bush2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/LandscapeModels/Nature/Bush1.tscn" type="PackedScene" id=3]
+
+[node name="BushCollection2" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6.01121 )
+
+[node name="Bush1" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.0759185, 0, 0.997114, 0, 1, 0, -0.997114, 0, -0.0759185, 1.20305, 0, -0.568829 )
+
+[node name="Bush2" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.701171, 0, 0.712994, 0, 1, 0, -0.712994, 0, 0.701171, 1.98393, 0, 0.202881 )
+
+[node name="Bush3" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.435702, 0, 0.900091, 0, 1, 0, -0.900091, 0, -0.435702, 0.805524, 0, -0.206738 )
+
+[node name="Bush4" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.380683, 0, 0.924706, 0, 1, 0, -0.924706, 0, -0.380683, -0.472531, 0, -0.342051 )
+
+[node name="Bush5" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.446182, 0, 0.894942, 0, 1, 0, -0.894942, 0, 0.446182, 0.508786, 0, 0.150209 )
+
+[node name="Bush6" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.692798, 0, 0.721132, 0, 1, 0, -0.721132, 0, -0.692798, -0.738529, 0, 0.125264 )
+
+[node name="Bush7" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999266, 0, -0.0383179, 0, 1, 0, 0.0383179, 0, -0.999266, -1.50898, 0, -1.25934 )
+
+[node name="Bush8" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.686085, 0, 0.727521, 0, 1, 0, -0.727521, 0, -0.686085, -0.70841, 0, -2.0106 )
+
+[node name="Bush9" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.915859, 0, -0.4015, 0, 1, 0, 0.4015, 0, -0.915859, -1.16211, 0, -0.848464 )
+
+[node name="Bush10" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0819037, 0, -0.99664, 0, 1, 0, 0.99664, 0, 0.0819037, -0.205174, 0, -0.758012 )
+
+[node name="Bush11" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.696877, 0, -0.71719, 0, 1, 0, 0.71719, 0, -0.696877, -0.990669, 0, -1.52502 )
+
+[node name="Bush12" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.441099, 0, -0.897459, 0, 1, 0, 0.897459, 0, 0.441099, 0.190171, 0, -1.12248 )
+
+[node name="Bush13" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.955541, 0, -0.294858, 0, 1, 0, 0.294858, 0, 0.955541, 0.952921, 0, -0.646989 )
+
+[node name="Bush14" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.406354, 0, -0.913716, 0, 1, 0, 0.913716, 0, 0.406354, -0.0513062, 0, -0.203335 )
+
+[node name="Bush15" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.99715, 0, 0.0754487, 0, 1, 0, -0.0754487, 0, 0.99715, 0.761745, 0, -1.14957 )
+
+[node name="Bush16" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.252863, 0, 0.967502, 0, 1, 0, -0.967502, 0, 0.252863, -0.111201, 0, -1.55191 )
+
+[node name="Bush17" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.895106, 0, 0.445854, 0, 1, 0, -0.445854, 0, 0.895106, 0.375869, 0, -0.568006 )
+
+[node name="Bush18" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.118907, 0, 0.992905, 0, 1, 0, -0.992905, 0, -0.118907, -0.604959, 0, -1.33897 )
+
+[node name="Bush19" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.82088, 0, 0.571101, 0, 1, 0, -0.571101, 0, -0.82088, -0.386359, 0, -2.90835 )
+
+[node name="Bush20" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.1097, 0, 0.993965, 0, 1, 0, -0.993965, 0, -0.1097, 0.70517, 0, -3.0261 )
+
+[node name="Bush21" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.972974, 0, 0.230916, 0, 1, 0, -0.230916, 0, -0.972974, -0.356828, 0, -2.37145 )
+
+[node name="Bush22" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.534721, 0, -0.845029, 0, 1, 0, 0.845029, 0, -0.534721, 0.35272, 0, -1.72302 )
+
+[node name="Bush23" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.988228, 0, -0.152986, 0, 1, 0, 0.152986, 0, -0.988228, 0.187428, 0, -2.80837 )
+
+[node name="Bush24" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.188221, 0, -0.982127, 0, 1, 0, 0.982127, 0, -0.188221, 0.887822, 0, -1.77596 )
+
+[node name="Bush25" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.854839, 0, 0.518893, 0, 1, 0, -0.518893, 0, -0.854839, 3.96634, 0, -2.48632 )
+
+[node name="Bush26" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.171362, 0, 0.985208, 0, 1, 0, -0.985208, 0, -0.171362, 5.04842, 0, -2.67179 )
+
+[node name="Bush27" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.985461, 0, 0.1699, 0, 1, 0, -0.1699, 0, -0.985461, 4.02924, 0, -1.9523 )
+
+[node name="Bush28" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.973435, 0, 0.228963, 0, 1, 0, -0.228963, 0, -0.973435, 3.17503, 0, -0.992055 )
+
+[node name="Bush29" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.46776, 0, 0.883855, 0, 1, 0, -0.883855, 0, -0.46776, 4.14664, 0, -1.50321 )
+
+[node name="Bush30" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.989676, 0, -0.14332, 0, 1, 0, 0.14332, 0, -0.989676, 3.40005, 0, -0.50369 )
+
+[node name="Bush31" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.550714, 0, -0.834694, 0, 1, 0, 0.834694, 0, -0.550714, 1.82577, 0, -0.68358 )
+
+[node name="Bush32" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.990962, 0, -0.134142, 0, 1, 0, 0.134142, 0, -0.990962, 1.68118, 0, -1.77188 )
+
+[node name="Bush33" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.206887, 0, -0.978365, 0, 1, 0, 0.978365, 0, -0.206887, 2.36178, 0, -0.726322 )
+
+[node name="Bush34" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.857939, 0, -0.513751, 0, 1, 0, 0.513751, 0, 0.857939, 2.99254, 0, -1.45162 )
+
+[node name="Bush35" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.177274, 0, -0.984162, 0, 1, 0, 0.984162, 0, 0.177274, 1.91159, 0, -1.25965 )
+
+[node name="Bush36" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.986464, 0, -0.16398, 0, 1, 0, 0.16398, 0, 0.986464, 2.92644, 0, -1.98526 )
+
+[node name="Bush37" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.796118, 0, 0.605141, 0, 1, 0, -0.605141, 0, 0.796118, 3.75715, 0, -2.32848 )
+
+[node name="Bush38" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.979449, 0, -0.201693, 0, 1, 0, 0.201693, 0, 0.979449, 3.53307, 0, -1.25373 )
+
+[node name="Bush39" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.519295, 0, 0.854595, 0, 1, 0, -0.854595, 0, 0.519295, 3.23724, 0, -2.46571 )
+
+[node name="Bush40" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.639318, 0, 0.768942, 0, 1, 0, -0.768942, 0, -0.639318, 2.40184, 0, -1.9903 )
+
+[node name="Bush41" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.158744, 0, 0.98732, 0, 1, 0, -0.98732, 0, 0.158744, 3.48535, 0, -1.81336 )
+
+[node name="Bush42" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.87645, 0, 0.481494, 0, 1, 0, -0.481494, 0, -0.87645, 2.28744, 0, -1.4649 )
+
+[node name="Bush43" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.942286, 0, -0.33481, 0, 1, 0, 0.33481, 0, -0.942286, 1.13886, 0, -2.55645 )
+
+[node name="Bush44" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.87195, 0, 0.489596, 0, 1, 0, -0.489596, 0, -0.87195, 1.67872, 0, -3.51241 )
+
+[node name="Bush45" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.754286, 0, -0.656546, 0, 1, 0, 0.656546, 0, -0.754286, 1.59254, 0, -2.26782 )
+
+[node name="Bush46" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.375626, 0, -0.926771, 0, 1, 0, 0.926771, 0, 0.375626, 2.53286, 0, -2.4671 )
+
+[node name="Bush47" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.451064, 0, -0.892491, 0, 1, 0, 0.892491, 0, -0.451064, 1.55425, 0, -2.96471 )
+
+[node name="Bush48" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.688848, 0, -0.724906, 0, 1, 0, 0.724906, 0, 0.688848, 2.80141, 0, -2.93295 )
