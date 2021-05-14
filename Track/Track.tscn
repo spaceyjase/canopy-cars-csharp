@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Cars/CarScenes/DeliveryTruck.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/LandscapeModels/Nature/Rock3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Track/Camera.cs" type="Script" id=9]
 
 [sub_resource type="ProceduralSky" id=3]
 ground_energy = 2.0
@@ -39,6 +40,14 @@ distance_fade_min_distance = 30.0
 distance_fade_max_distance = 5.0
 
 [node name="Track" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1.26666e-07, 0.258819, -0.965926, -3.394e-08, 0.965926, 0.258819, 1, -1.42109e-14, 1.31134e-07, 56, 6, 12 )
+far = 1000.0
+script = ExtResource( 9 )
+followThisPath = NodePath("../DeliveryTruck")
+targetDistanceInMeters = 6.0
+targetHeightInMeters = 3.0
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
@@ -216,7 +225,3 @@ transform = Transform( 0.26294, -0.323502, -1.95607, -1.36284, 1.40362, -0.41533
 [node name="DeliveryTruck" parent="." instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 12 )
 playerId = 1
-
-[node name="Camera" type="Camera" parent="DeliveryTruck"]
-transform = Transform( -1, -1.13133e-08, -8.89122e-08, -3.394e-08, 0.965926, 0.258819, 8.29545e-08, 0.258819, -0.965926, 0, 3, -5 )
-far = 1000.0
