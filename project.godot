@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "MeshInstance",
+"class": "CloudDome",
+"language": "GDScript",
+"path": "res://addons/cloud/Cloud.gd"
+} ]
+_global_script_class_icons={
+"CloudDome": ""
+}
+
 [application]
 
 config/name="cloud-cars"
