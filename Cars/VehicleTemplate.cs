@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Godot;
 
 public class VehicleTemplate : VehicleBody
@@ -8,6 +11,31 @@ public class VehicleTemplate : VehicleBody
     [Export] private int throttle = 210000;
     [Export] private int maxSteer = 15;
     [Export] private int maxHealth = 100;
+
+    private readonly List<VehicleWheel> wheels = new List<VehicleWheel>();
+    private WheelSpawner wheelSpawner;
+
+    private bool alive = true;
+
+    public override void _Ready()
+    {
+      base._Ready();
+
+      foreach (var child in GetChildren())
+      {
+        switch (child)
+        {
+          case VehicleWheel wheel:
+            wheels.Add(wheel);
+            break;
+          case WheelSpawner spawner when wheelSpawner != null:
+            throw new ApplicationException("Wheel spawner already assigned");
+          case WheelSpawner spawner:
+            wheelSpawner = spawner;
+            break;
+        }
+      }
+    }
 
     public override void _PhysicsProcess(float delta)
     {
@@ -30,10 +58,26 @@ public class VehicleTemplate : VehicleBody
             EngineForce = -throttle * delta;
           }
         }
+        else if (playerId == 1 && alive && Input.IsActionPressed("test_death"))
+        {
+          Die();
+        }
 
         Steering += (Input.GetActionStrength($"Player_{playerId}_Left") -
                      Input.GetActionStrength($"Player_{playerId}_Right")) * delta;
         Steering = Mathf.Clamp(Steering, -maxSteer, maxSteer);
         Steering = Mathf.Lerp(Steering, 0f, 0.1f); // TODO: recenter speed
+    }
+
+    private void Die()
+    {
+      alive = false;
+      
+      foreach (var wheel in wheels)
+      {
+        wheel.QueueFree();
+      }
+
+      wheelSpawner.Die();
     }
 }
