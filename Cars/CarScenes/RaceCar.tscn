@@ -143,8 +143,8 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.691,
 [node name="MeshInstance" parent="WheelSpawner/DeadWheel1" index="1"]
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 2 )
-material/1 = ExtResource( 6 )
-material/2 = null
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 6 )
 
 [node name="DeadWheel2" parent="WheelSpawner" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691, 0.203285, 0.639109 )
@@ -152,8 +152,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691, 0.203285, 0.639109 )
 [node name="MeshInstance" parent="WheelSpawner/DeadWheel2" index="1"]
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 2 )
-material/1 = ExtResource( 6 )
-material/2 = null
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 6 )
 
 [node name="DeadWheel3" parent="WheelSpawner" index="2"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.691, 0.203, -0.759461 )
@@ -161,8 +161,8 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.691,
 [node name="MeshInstance" parent="WheelSpawner/DeadWheel3" index="1"]
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 2 )
-material/1 = ExtResource( 6 )
-material/2 = null
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 6 )
 
 [node name="DeadWheel4" parent="WheelSpawner" index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691, 0.203, -0.759461 )
@@ -170,5 +170,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691, 0.203, -0.759461 )
 [node name="MeshInstance" parent="WheelSpawner/DeadWheel4" index="1"]
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 2 )
-material/1 = ExtResource( 6 )
-material/2 = null
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 6 )

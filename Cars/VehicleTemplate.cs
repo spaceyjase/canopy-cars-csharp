@@ -58,7 +58,7 @@ public class VehicleTemplate : VehicleBody
             EngineForce = -throttle * delta;
           }
         }
-        else if (playerId == 1 && alive && Input.IsActionPressed("test_death"))
+        else if (alive && Input.IsActionPressed("test_death"))
         {
           Die();
         }
