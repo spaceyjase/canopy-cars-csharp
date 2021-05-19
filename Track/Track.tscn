@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Cars/CarScenes/DeliveryTruck.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Track/SplitScreen.cs" type="Script" id=10]
 [ext_resource path="res://addons/cloud/Cloud.tscn" type="PackedScene" id=11]
 [ext_resource path="res://addons/cloud/Cloud.shader" type="Shader" id=12]
+[ext_resource path="res://Cars/CarScenes/FireTruck.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Cars/CarScenes/RaceCar.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_energy = 2.0
@@ -29,7 +31,7 @@ ssao_enabled = true
 adjustment_enabled = true
 adjustment_saturation = 1.5
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=12]
 render_priority = -123
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
@@ -43,9 +45,9 @@ shader_param/detail_noise = true
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=13]
 render_priority = -124
-next_pass = SubResource( 3 )
+next_pass = SubResource( 12 )
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
 shader_param/speed = Vector2( 3, 0 )
@@ -58,9 +60,9 @@ shader_param/detail_noise = false
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=14]
 render_priority = -125
-next_pass = SubResource( 4 )
+next_pass = SubResource( 13 )
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
 shader_param/speed = Vector2( 3, 0 )
@@ -73,9 +75,9 @@ shader_param/detail_noise = false
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="ShaderMaterial" id=6]
+[sub_resource type="ShaderMaterial" id=15]
 render_priority = -126
-next_pass = SubResource( 5 )
+next_pass = SubResource( 14 )
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
 shader_param/speed = Vector2( 3, 0 )
@@ -88,9 +90,9 @@ shader_param/detail_noise = false
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=16]
 render_priority = -127
-next_pass = SubResource( 6 )
+next_pass = SubResource( 15 )
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
 shader_param/speed = Vector2( 3, 0 )
@@ -103,9 +105,9 @@ shader_param/detail_noise = false
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=17]
 render_priority = -128
-next_pass = SubResource( 7 )
+next_pass = SubResource( 16 )
 shader = ExtResource( 12 )
 shader_param/seed = 15000.0
 shader_param/speed = Vector2( 3, 0 )
@@ -118,7 +120,7 @@ shader_param/detail_noise = false
 shader_param/upper_enabled = true
 shader_param/lower_enabled = true
 
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=18]
 flip_faces = true
 
 [sub_resource type="Curve3D" id=10]
@@ -159,8 +161,8 @@ shadow_enabled = true
 
 [node name="Cloud" parent="WorldEnvironment" instance=ExtResource( 11 )]
 transform = Transform( 200, 0, 0, 0, 10, 0, 0, 0, 100, -40, 0, 40 )
-material_override = SubResource( 8 )
-mesh = SubResource( 9 )
+material_override = SubResource( 17 )
+mesh = SubResource( 18 )
 cloud_seed = 15000.0
 cloud_speed = Vector2( 3, 0 )
 cloud_thickness = 256.0
@@ -228,7 +230,7 @@ transform = Transform( 1.26666e-07, 0.258819, -0.965926, -3.394e-08, 0.965926, 0
 far = 1000.0
 script = ExtResource( 9 )
 cameraId = 2
-followThisPath = NodePath("../../../../../Players/DeliveryTruck2")
+followThisPath = NodePath("../../../../../Players/FireTruck")
 targetDistanceInMeters = 6.0
 targetHeightInMeters = 3.0
 
@@ -250,7 +252,7 @@ transform = Transform( 1.26666e-07, 0.258819, -0.965926, -3.394e-08, 0.965926, 0
 far = 1000.0
 script = ExtResource( 9 )
 cameraId = 3
-followThisPath = NodePath("../../../../../Players/DeliveryTruck3")
+followThisPath = NodePath("../../../../../Players/RaceCar")
 targetDistanceInMeters = 6.0
 targetHeightInMeters = 3.0
 
@@ -283,12 +285,12 @@ targetHeightInMeters = 3.0
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 12 )
 playerId = 1
 
-[node name="DeliveryTruck2" parent="Players" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 15.0851 )
+[node name="FireTruck" parent="Players" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61, 3, 15.085 )
 playerId = 2
 
-[node name="DeliveryTruck3" parent="Players" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55.9143, 3, 12 )
+[node name="RaceCar" parent="Players" instance=ExtResource( 14 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55.914, 3, 12 )
 playerId = 3
 
 [node name="DeliveryTruck4" parent="Players" instance=ExtResource( 2 )]

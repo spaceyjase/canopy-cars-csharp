@@ -127,6 +127,7 @@ surfaces/1 = {
 }
 
 [node name="DeliveryTruck" instance=ExtResource( 1 )]
+carName = "Delivery"
 
 [node name="body" type="MeshInstance" parent="." index="0"]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
