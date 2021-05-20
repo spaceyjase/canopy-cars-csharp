@@ -1,0 +1,275 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Track/WorldEnvironment.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Tiles.tres" type="MeshLibrary" id=2]
+[ext_resource path="res://Assets/LandscapeModels/Nature/Rock1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/LandscapeModels/Nature/TreeCluster1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/cloud/Cloud.shader" type="Shader" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = -123
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.9
+shader_param/max_density = 5.0
+shader_param/altitude = 2000.0
+shader_param/color = Color( 0.568627, 0.698039, 0.878431, 1 )
+shader_param/detail_noise = true
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="ShaderMaterial" id=2]
+render_priority = -124
+next_pass = SubResource( 1 )
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.707299
+shader_param/max_density = 4.51825
+shader_param/altitude = 2051.2
+shader_param/color = Color( 0.723921, 0.806745, 0.922196, 1 )
+shader_param/detail_noise = false
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="ShaderMaterial" id=3]
+render_priority = -125
+next_pass = SubResource( 2 )
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.562269
+shader_param/max_density = 4.15567
+shader_param/altitude = 2102.4
+shader_param/color = Color( 0.844706, 0.891294, 0.956235, 1 )
+shader_param/detail_noise = false
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="ShaderMaterial" id=4]
+render_priority = -126
+next_pass = SubResource( 3 )
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.500789
+shader_param/max_density = 4.00197
+shader_param/altitude = 2153.6
+shader_param/color = Color( 0.93098, 0.951686, 0.980549, 1 )
+shader_param/detail_noise = false
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="ShaderMaterial" id=5]
+render_priority = -127
+next_pass = SubResource( 4 )
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.538069
+shader_param/max_density = 4.09517
+shader_param/altitude = 2204.8
+shader_param/color = Color( 0.982745, 0.987922, 0.995137, 1 )
+shader_param/detail_noise = false
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="ShaderMaterial" id=6]
+render_priority = -128
+next_pass = SubResource( 5 )
+shader = ExtResource( 5 )
+shader_param/seed = 15000.0
+shader_param/speed = Vector2( 3, 0 )
+shader_param/transform_speed = Vector2( 0, 1e-05 )
+shader_param/min_density = 0.664886
+shader_param/max_density = 4.41221
+shader_param/altitude = 2256.0
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/detail_noise = false
+shader_param/upper_enabled = true
+shader_param/lower_enabled = true
+
+[sub_resource type="CubeMesh" id=7]
+flip_faces = true
+
+[node name="PlayerSelect" type="Spatial"]
+
+[node name="Level" type="Spatial" parent="."]
+
+[node name="TreeCluster1" parent="Level" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6678, -0.401108, 8.97016 )
+
+[node name="TreeCluster2" parent="Level" instance=ExtResource( 4 )]
+transform = Transform( 0.562545, 0, 0.826766, 0, 1, 0, -0.826766, 0, 0.562545, 15.1195, -0.401108, 2.00976 )
+
+[node name="TreeCluster3" parent="Level" instance=ExtResource( 4 )]
+transform = Transform( 0.562545, 0, 0.826766, 0, 1, 0, -0.826766, 0, 0.562545, -4.16455, -0.401108, -40.3165 )
+
+[node name="Rock1" parent="Level" instance=ExtResource( 3 )]
+transform = Transform( 0.619108, 0, 0.785306, 0, 1, 0, -0.785306, 0, 0.619108, -9.04863, 2.41565, -46.0718 )
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 1 )]
+
+[node name="DirectionalLight" parent="WorldEnvironment" index="0"]
+transform = Transform( 0.191192, 0.969182, -0.155344, 0.241513, 0.106948, 0.964486, 0.951376, -0.22192, -0.213623, 0, 29.8289, 27 )
+
+[node name="Cloud" parent="WorldEnvironment" index="1"]
+transform = Transform( 50.025, 0, 0, 0, 50.025, 0, 0, 0, 50.025, -1.87762, 3.87577, 22.476 )
+material_override = SubResource( 6 )
+mesh = SubResource( 7 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Viewport1" type="ViewportContainer" parent="GridContainer"]
+margin_right = 510.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Viewport" type="Viewport" parent="GridContainer/Viewport1"]
+size = Vector2( 510, 298 )
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Player1" type="Spatial" parent="GridContainer/Viewport1/Viewport"]
+
+[node name="GridMap" type="GridMap" parent="GridContainer/Viewport1/Viewport/Player1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+mesh_library = ExtResource( 2 )
+cell_size = Vector3( 4, 4, 4 )
+cell_scale = 2.0
+data = {
+"cells": PoolIntArray( 3, 2, 1048576, 65531, 2, 1048576, 65535, 2, 1, 3, 6, 1048576, 65531, 6, 1048577, 65535, 6, 1441796, 11, 65494, 1441792, 15, 65494, 1441792, 65519, 65494, 1441792, 65523, 65494, 1441792, 11, 65498, 1441792, 15, 65498, 1441792, 65519, 65498, 1441792, 65523, 65498, 1441792, 11, 65502, 1441792, 15, 65502, 1441792, 19, 65502, 1441792, 65515, 65502, 1441792, 65519, 65502, 1441792, 65523, 65502, 1441792, 11, 65506, 1441792, 15, 65506, 1441792, 19, 65506, 1441792, 65515, 65506, 1441792, 65519, 65506, 1441792, 65523, 65506, 1441792, 11, 65510, 1441792, 15, 65510, 1441792, 19, 65510, 1441792, 65515, 65510, 1441792, 65519, 65510, 1441792, 65523, 65510, 0, 7, 65514, 18, 11, 65514, 0, 15, 65514, 1441792, 65519, 65514, 1441792, 65523, 65514, 0, 65527, 65514, 655378, 65539, 65514, 1441808, 131067, 65514, 655376, 131071, 65514, 1441810, 3, 65518, 1441809, 7, 65518, 1441808, 11, 65518, 0, 65523, 65518, 0, 65527, 65518, 655376, 65531, 65518, 655377, 131071, 65518, 655360, 3, 65522, 1441808, 7, 65522, 0, 11, 65522, 0, 65523, 65522, 0, 65527, 65522, 0, 65531, 65522, 655376, 65535, 65522, 1441810, 3, 65526, 1441793, 7, 65526, 3, 65527, 65526, 0, 65531, 65526, 1441792, 65535, 65526, 1048580, 3, 65530, 1441805, 65531, 65530, 1048589, 65535, 65530, 1441806, 3, 65534, 1441805, 65531, 65534, 1048589, 65535, 65534, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Camera" type="Camera" parent="GridContainer/Viewport1/Viewport/Player1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87762, 3.87577, 22.476 )
+
+[node name="Viewport2" type="ViewportContainer" parent="GridContainer"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Viewport" type="Viewport" parent="GridContainer/Viewport2"]
+size = Vector2( 510, 298 )
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Player2" type="Spatial" parent="GridContainer/Viewport2/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 192.145, 0, 0 )
+
+[node name="GridMap" type="GridMap" parent="GridContainer/Viewport2/Viewport/Player2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+mesh_library = ExtResource( 2 )
+cell_size = Vector3( 4, 4, 4 )
+cell_scale = 2.0
+data = {
+"cells": PoolIntArray( 3, 2, 1048576, 65531, 2, 1048576, 65535, 2, 1, 3, 6, 1048576, 65531, 6, 1048577, 65535, 6, 1441796, 11, 65494, 1441792, 15, 65494, 1441792, 65519, 65494, 1441792, 65523, 65494, 1441792, 11, 65498, 1441792, 15, 65498, 1441792, 65519, 65498, 1441792, 65523, 65498, 1441792, 11, 65502, 1441792, 15, 65502, 1441792, 19, 65502, 1441792, 65515, 65502, 1441792, 65519, 65502, 1441792, 65523, 65502, 1441792, 11, 65506, 1441792, 15, 65506, 1441792, 19, 65506, 1441792, 65515, 65506, 1441792, 65519, 65506, 1441792, 65523, 65506, 1441792, 11, 65510, 1441792, 15, 65510, 1441792, 19, 65510, 1441792, 65515, 65510, 1441792, 65519, 65510, 1441792, 65523, 65510, 0, 7, 65514, 18, 11, 65514, 0, 15, 65514, 1441792, 65519, 65514, 1441792, 65523, 65514, 0, 65527, 65514, 655378, 65539, 65514, 1441808, 131067, 65514, 655376, 131071, 65514, 1441810, 3, 65518, 1441809, 7, 65518, 1441808, 11, 65518, 0, 65523, 65518, 0, 65527, 65518, 655376, 65531, 65518, 655377, 131071, 65518, 655360, 3, 65522, 1441808, 7, 65522, 0, 11, 65522, 0, 65523, 65522, 0, 65527, 65522, 0, 65531, 65522, 655376, 65535, 65522, 1441810, 3, 65526, 1441793, 7, 65526, 3, 65527, 65526, 0, 65531, 65526, 1441792, 65535, 65526, 1048580, 3, 65530, 1441805, 65531, 65530, 1048589, 65535, 65530, 1441806, 3, 65534, 1441805, 65531, 65534, 1048589, 65535, 65534, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Camera" type="Camera" parent="GridContainer/Viewport2/Viewport/Player2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87762, 3.87577, 22.476 )
+
+[node name="Viewport3" type="ViewportContainer" parent="GridContainer"]
+margin_top = 302.0
+margin_right = 510.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Viewport" type="Viewport" parent="GridContainer/Viewport3"]
+size = Vector2( 510, 298 )
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Player3" type="Spatial" parent="GridContainer/Viewport3/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 381.969, 0, 0 )
+
+[node name="GridMap" type="GridMap" parent="GridContainer/Viewport3/Viewport/Player3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+mesh_library = ExtResource( 2 )
+cell_size = Vector3( 4, 4, 4 )
+cell_scale = 2.0
+data = {
+"cells": PoolIntArray( 3, 2, 1048576, 65531, 2, 1048576, 65535, 2, 1, 3, 6, 1048576, 65531, 6, 1048577, 65535, 6, 1441796, 11, 65494, 1441792, 15, 65494, 1441792, 65519, 65494, 1441792, 65523, 65494, 1441792, 11, 65498, 1441792, 15, 65498, 1441792, 65519, 65498, 1441792, 65523, 65498, 1441792, 11, 65502, 1441792, 15, 65502, 1441792, 19, 65502, 1441792, 65515, 65502, 1441792, 65519, 65502, 1441792, 65523, 65502, 1441792, 11, 65506, 1441792, 15, 65506, 1441792, 19, 65506, 1441792, 65515, 65506, 1441792, 65519, 65506, 1441792, 65523, 65506, 1441792, 11, 65510, 1441792, 15, 65510, 1441792, 19, 65510, 1441792, 65515, 65510, 1441792, 65519, 65510, 1441792, 65523, 65510, 0, 7, 65514, 18, 11, 65514, 0, 15, 65514, 1441792, 65519, 65514, 1441792, 65523, 65514, 0, 65527, 65514, 655378, 65539, 65514, 1441808, 131067, 65514, 655376, 131071, 65514, 1441810, 3, 65518, 1441809, 7, 65518, 1441808, 11, 65518, 0, 65523, 65518, 0, 65527, 65518, 655376, 65531, 65518, 655377, 131071, 65518, 655360, 3, 65522, 1441808, 7, 65522, 0, 11, 65522, 0, 65523, 65522, 0, 65527, 65522, 0, 65531, 65522, 655376, 65535, 65522, 1441810, 3, 65526, 1441793, 7, 65526, 3, 65527, 65526, 0, 65531, 65526, 1441792, 65535, 65526, 1048580, 3, 65530, 1441805, 65531, 65530, 1048589, 65535, 65530, 1441806, 3, 65534, 1441805, 65531, 65534, 1048589, 65535, 65534, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Camera" type="Camera" parent="GridContainer/Viewport3/Viewport/Player3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87762, 3.87577, 22.476 )
+
+[node name="Viewport4" type="ViewportContainer" parent="GridContainer"]
+margin_left = 514.0
+margin_top = 302.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Viewport" type="Viewport" parent="GridContainer/Viewport4"]
+size = Vector2( 510, 298 )
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Player4" type="Spatial" parent="GridContainer/Viewport4/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 574.114, 0, 0 )
+
+[node name="GridMap" type="GridMap" parent="GridContainer/Viewport4/Viewport/Player4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+mesh_library = ExtResource( 2 )
+cell_size = Vector3( 4, 4, 4 )
+cell_scale = 2.0
+data = {
+"cells": PoolIntArray( 3, 2, 1048576, 65531, 2, 1048576, 65535, 2, 1, 3, 6, 1048576, 65531, 6, 1048577, 65535, 6, 1441796, 11, 65494, 1441792, 15, 65494, 1441792, 65519, 65494, 1441792, 65523, 65494, 1441792, 11, 65498, 1441792, 15, 65498, 1441792, 65519, 65498, 1441792, 65523, 65498, 1441792, 11, 65502, 1441792, 15, 65502, 1441792, 19, 65502, 1441792, 65515, 65502, 1441792, 65519, 65502, 1441792, 65523, 65502, 1441792, 11, 65506, 1441792, 15, 65506, 1441792, 19, 65506, 1441792, 65515, 65506, 1441792, 65519, 65506, 1441792, 65523, 65506, 1441792, 11, 65510, 1441792, 15, 65510, 1441792, 19, 65510, 1441792, 65515, 65510, 1441792, 65519, 65510, 1441792, 65523, 65510, 0, 7, 65514, 18, 11, 65514, 0, 15, 65514, 1441792, 65519, 65514, 1441792, 65523, 65514, 0, 65527, 65514, 655378, 65539, 65514, 1441808, 131067, 65514, 655376, 131071, 65514, 1441810, 3, 65518, 1441809, 7, 65518, 1441808, 11, 65518, 0, 65523, 65518, 0, 65527, 65518, 655376, 65531, 65518, 655377, 131071, 65518, 655360, 3, 65522, 1441808, 7, 65522, 0, 11, 65522, 0, 65523, 65522, 0, 65527, 65522, 0, 65531, 65522, 655376, 65535, 65522, 1441810, 3, 65526, 1441793, 7, 65526, 3, 65527, 65526, 0, 65531, 65526, 1441792, 65535, 65526, 1048580, 3, 65530, 1441805, 65531, 65530, 1048589, 65535, 65530, 1441806, 3, 65534, 1441805, 65531, 65534, 1048589, 65535, 65534, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Camera" type="Camera" parent="GridContainer/Viewport4/Viewport/Player4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87762, 3.87577, 22.476 )
+
+[editable path="WorldEnvironment"]
